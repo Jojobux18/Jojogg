@@ -1,0 +1,107 @@
+--Load
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/hakaiofc/Base/main/HUBORION')))()
+
+--Main Script
+local Window = OrionLib:MakeWindow({Name = "updated JojoBR", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest", IntroEnabled = false})
+
+
+--Valor
+_G.Auto7 = True
+
+--Função
+function Auto7()
+while _G.Auto7 == true do
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\7"
+        }
+    },
+    [2] = "50834c9ca68e46929d3fe7bb2091b0ce"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FurryNet"):WaitForChild("FurryEvent"):FireServer(unpack(args))
+wait(0.00001)
+end
+end
+
+
+--Valor
+_G.Auto6 = True
+
+--Função
+function Auto6()
+while _G.Auto6 == true do
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\6"
+        }
+    },
+    [2] = "50834c9ca68e46929d3fe7bb2091b0ce"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FurryNet"):WaitForChild("FurryEvent"):FireServer(unpack(args))
+wait(0.00001)
+end
+end
+
+
+--Valor
+_G.Auto6 = True
+
+--Função
+function Auto3()
+while _G.Auto3 == true do
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "\3",
+            [2] = "Right"
+        }
+    },
+    [2] = "50834c9ca68e46929d3fe7bb2091b0ce"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("FurryNet"):WaitForChild("FurryEvent"):FireServer(unpack(args))
+wait(0.00001)
+end
+end
+
+
+
+--Main
+local FarmTab= Window:MakeTab({
+    Name = "Main",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+local Section = FarmTab:AddSection({
+    Name = "AutoFarm"
+})
+FarmTab:AddToggle({
+    Name = "Auto-Situp",
+    Default = false,
+    Callback = function(Value)
+        _G.Auto7 = Value
+        Auto7(0.000001)
+    end
+})
+
+FarmTab:AddToggle({
+    Name = "Auto-Flexao",
+    Default = false,
+    Callback = function(Value)
+        _G.Auto6 = Value
+        Auto6(0.000001)
+    end
+})
+
+FarmTab:AddToggle({
+    Name = "Auto-Soco",
+    Default = false,
+    Callback = function(Value)
+        _G.Auto3 = Value
+        Auto3(0.000001)
+    end
+})
